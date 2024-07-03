@@ -1,4 +1,4 @@
-package com.example.msauth.Config;
+package com.example.msauth.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,8 +16,9 @@ public class CorsConfig {
                 registry.addMapping("/**")
                         .allowedOrigins("http://localhost:63555")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("Content-Type", "Authorization")
-                        .allowCredentials(true);
+                        .allowedHeaders("*")
+                        .allowCredentials(true)
+                        .maxAge(3600);  // Cachea la respuesta de preflight durante una hora
             }
         };
     }
