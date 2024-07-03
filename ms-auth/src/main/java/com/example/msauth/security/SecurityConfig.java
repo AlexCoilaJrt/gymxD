@@ -15,6 +15,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.cors().and().csrf().disable()
                 .authorizeRequests()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()  // Permitir todas las solicitudes OPTIONS
+                .antMatchers("/auth/**").permitAll()  // Permitir todas las solicitudes a /auth
                 .anyRequest().authenticated();
     }
 }
