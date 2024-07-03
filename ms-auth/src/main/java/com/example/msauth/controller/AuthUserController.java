@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
+@CrossOrigin(origins = "http://localhost:63555") // Permite solicitudes desde este origen específico
 public class AuthUserController {
     @Autowired
     AuthUserService authUserService;

@@ -1,4 +1,4 @@
-export interface Curso {
+export interface Clientegym {
   id: number;
   nombre: string;
   apellido: string;

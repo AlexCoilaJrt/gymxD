@@ -7,10 +7,10 @@ import { Clientegym } from './clientegym.model';
   providedIn: 'root'
 })
 export class ClientegymService {
-
-  private apiUrl = 'http://localhost:8099/clientegym';
+  private apiUrl = 'http://localhost:8099/clientegym'; // Asegúrate de que esta URL sea correcta
 
   constructor(private http: HttpClient) { }
+
   obtenerClientegyms(): Observable<Clientegym[]> {
     return this.http.get<Clientegym[]>(this.apiUrl);
   }
